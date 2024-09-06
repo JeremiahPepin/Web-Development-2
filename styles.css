@@ -1,0 +1,122 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#gameContainer {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.gameTitle {
+    text-align: center;
+}
+
+#gameResult {
+    text-align: center;
+    margin-bottom: 100px;
+    height: 37px;
+}
+
+#attemptsContainer {
+    position: absolute;
+    top: 50px;
+    left: 25px;
+    border: 1px black solid;
+    border-radius: 5px;
+    width: 155px;
+    height: 100px;
+}
+
+#attemptsContainer span {
+    display: inline-block;
+    font-size: 20px;
+    margin: 10px 10px;
+}
+
+#colorContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr; /* Example: Creates three equal-width columns */
+    grid-gap: 10px; 
+    margin: auto auto 50px auto;
+    width: 500px;
+    justify-content: center;
+    justify-items: center;
+}
+
+.token {
+    position: relative;
+    background-color: black;
+    width: 150px;
+    height: 150px;
+    border: 2px black solid;
+    border-radius: 50%;
+}
+
+.token span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 30px;
+    color: white;
+
+}
+
+.guessToken {
+    background-color: blue;
+    cursor: pointer;
+    width:150px;
+    height: 150px;
+    border: 2px black solid;
+    border-radius: 50%;
+    transition: background-color 0.4s ease;
+}
+
+#resetBTN {
+    position: absolute;
+    left: 25px;
+    background-color: #007bff;
+    font-size: 15px;
+    padding: 10px 14.1px;
+    border: 1px black solid;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#checkBTN {
+    position: absolute;
+    right: 25px;
+    background-color: #007bff;
+    font-size: 15px;
+    padding: 10px 17px;
+    border: 1px black solid;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#checkBTN:hover, #resetBTN:hover {
+    background-color: #0056b3;
+} 
+
+#checkBTN:active, #resetBTN:active {
+    background-color: #007bff;
+} 
+
+@media screen and (max-width: 525px) {
+    #colorContainer {
+        width: 350px;
+    }
+    
+    .token, .guessToken {
+        width: 100px;
+        height: 100px;
+    }
+
+    #gameStatus {
+        margin-top: 120px;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link id="myStylesheet" rel="stylesheet" type="text/css" href="styles.css">
+    <script src="index.js" charset="utf-8" async defer></script>
+    <title>Color Game</title>
+  </head>
+  <body>
+    <div id="gameContainer">
+        <h1 class="gameTitle">Color Game</h1>
+        <h1 id="gameResult"></h1>
+        <div id="attemptsContainer">
+            <span id="colorCounter">Correct colors: 0</span>
+            <span id="attempts">Attempts left: 5</span>
+        </div>
+        <div id="colorContainer">
+            <div id="token1" class="token"><span class="tokenText">?</span></div>
+            <div id="token2" class="token"><span class="tokenText">?</span></div>
+            <div id="token3" class="token"><span class="tokenText">?</span></div>
+            <div class="guessToken" name="0"></div>
+            <div class="guessToken" name="1"></div>
+            <div class="guessToken" name="2"></div>
+        </div>
+        <button id="resetBTN">Restart</button>
+        <button id="checkBTN">Check</button>
+    </div>
+  </body>
+</html>
